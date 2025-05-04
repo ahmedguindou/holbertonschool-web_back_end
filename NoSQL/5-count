@@ -1,2 +1,2 @@
 // Script that displays the number of documents in the 'school' collection
-db.school.countDocuments()
+print(db.school.countDocuments())
