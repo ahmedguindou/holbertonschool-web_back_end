@@ -1,2 +1,2 @@
 // Script that deletes all documents with name="Holberton school" from the 'school' collection
-db.school.delete({ name: "Holberton school" })
+db.school.deleteMany({ name: "Holberton school" })
