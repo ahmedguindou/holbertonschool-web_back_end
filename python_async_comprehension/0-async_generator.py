@@ -1,19 +1,12 @@
 #!/usr/bin/env python3
-"""This module contains a coroutine
-that yields random floats asynchronously."""
-
+"""Module containing an asynchronous generator function"""
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
-    """
-    Yield a random float between 0 and 10.
-
-    The coroutine loops 10 times, each time waiting 1 second
-    and then yielding a random float between 0 and 10.
-    """
+async def async_generator() -> Generator[float, None, None]:
+    """Async generator that yields random numbers between 0 and 10."""
     for _ in range(10):
         await asyncio.sleep(1)
         yield random.uniform(0, 10)
